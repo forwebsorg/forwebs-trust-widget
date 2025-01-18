@@ -2,7 +2,7 @@ Welcome to Forwebs, your reliable partner in online trust and security. Our free
 
 Forwebs.org trust HTML/JS widget for webmasters. 
 
-1.) Add the JS code at the end of the content, before the </body> tag:
+1.) Add the JS code at the end of the content, before the </body> tag:<br>
 <code><script src="https://cdn.jsdelivr.net/gh/forwebsorg/forwebs-trust-widget/forwebs-widget.js"></script></code>
 
 Features:

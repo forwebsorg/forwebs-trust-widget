@@ -7,3 +7,8 @@ Forwebs.org trust HTML/JS widget for webmasters.
 
 Features:
 - Automatic website and business detection based on the domain. Account optional to access pro features.
+
+  
+## License
+
+This project is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0).

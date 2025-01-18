@@ -142,14 +142,14 @@
                 borderColor: "#ddd",
                 textColor: "#212529",
                 starColor: "#ffc107",
-                logo: "logo.png",
+                logo: "https://forwebs.org/1operation/logo.png",
             },
             dark: {
                 backgroundColor: "#212529",
                 borderColor: "#444",
                 textColor: "#f8f9fa",
                 starColor: "#ffc107",
-                logo: "logo-dark.png",
+                logo: "https://forwebs.org/1operation/logo-dark.png",
             },
         };
 
@@ -157,7 +157,7 @@
 
         // Fetch the data for the widget
         const domain = window.location.hostname;
-        fetch(`widget-datas.php?company=${domain}`)
+        fetch(`https://forwebs.org/1operation/api/widget-datas.php?company=${domain}`)
             .then(response => response.json())
             .then(data => {
                 const stars = data.stars;

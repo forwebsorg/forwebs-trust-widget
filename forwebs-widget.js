@@ -1,3 +1,14 @@
+/*!
+ * forwebs-widget.js
+ * Created by: Őri Gábor
+ * Website: Forwebs.org
+ * Version: 0.1
+ * Description: The Trust Widget that displays the website's reliability and reviews.
+ * License: CC BY-ND 4.0
+ */
+// This code is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0).
+// You can use the code, but modifications are not allowed.
+
 (() => {
     // Az összes widget keresése a .forwebs-widget osztály alapján
     const widgetContainers = document.querySelectorAll(".forwebs-widget");
@@ -5,94 +16,8 @@
     const languages = {
         english: { reliable: "Trusted", reviews: "Reviews" },
         hungarian: { reliable: "Megbízható", reviews: "Vélemények" },
-        mandarin: { reliable: "可靠", reviews: "评论" },
-        spanish: { reliable: "Confiable", reviews: "Reseñas" },
-        mexican_spanish: { reliable: "De confianza", reviews: "Opiniones" },
-        french: { reliable: "Fiable", reviews: "Avis" },
-        arabic: { reliable: "موثوق", reviews: "مراجعات" },
-        bengali: { reliable: "বিশ্বাসযোগ্য", reviews: "মতামত" },
-        russian: { reliable: "Надежный", reviews: "Отзывы" },
-        portuguese: { reliable: "Confiável", reviews: "Avaliações" },
-        hindi: { reliable: "विश्वसनीय", reviews: "समीक्षाएँ" },
-        urdu: { reliable: "قابل اعتماد", reviews: "جائزے" },
-        german: { reliable: "Zuverlässig", reviews: "Bewertungen" },
-        japanese: { reliable: "信頼できる", reviews: "レビュー" },
-        italian: { reliable: "Affidabile", reviews: "Recensioni" },
-        korean: { reliable: "신뢰할 수 있는", reviews: "리뷰" },
-        turkish: { reliable: "Güvenilir", reviews: "Yorumlar" },
-        vietnamese: { reliable: "Đáng tin cậy", reviews: "Đánh giá" },
-        polish: { reliable: "Niezawodny", reviews: "Opinie" },
-        ukrainian: { reliable: "Надійний", reviews: "Відгуки" },
-        romanian: { reliable: "Fiabil", reviews: "Recenzii" },
-        greek: { reliable: "Αξιόπιστος", reviews: "Κριτικές" },
-        dutch: { reliable: "Betrouwbaar", reviews: "Beoordelingen" },
-        swedish: { reliable: "Tillförlitlig", reviews: "Recensioner" },
-        finnish: { reliable: "Luotettava", reviews: "Arvostelut" },
-        czech: { reliable: "Spolehlivý", reviews: "Recenze" },
-        slovak: { reliable: "Spoľahlivý", reviews: "Recenzie" },
-        danish: { reliable: "Pålidelig", reviews: "Anmeldelser" },
-        bulgarian: { reliable: "Надежден", reviews: "Отзиви" },
-        serbian: { reliable: "Pouzdano", reviews: "Recenzije" },
-        croatian: { reliable: "Pouzdano", reviews: "Recenzije" },
-        slovene: { reliable: "Zanesljiv", reviews: "Mnenja" },
-        norwegian: { reliable: "Pålitelig", reviews: "Vurderinger" },
-        latvian: { reliable: "Uzticams", reviews: "Atsauksmes" },
-        lithuanian: { reliable: "Patikimas", reviews: "Atsiliepimai" },
-        estonian: { reliable: "Usaldusväärne", reviews: "Arvustused" },
-        albanian: { reliable: "I besueshëm", reviews: "Rishikime" },
-        macedonian: { reliable: "Доверлив", reviews: "Прегледи" },
-        bosnian: { reliable: "Pouzdano", reviews: "Recenzije" },
-        montenegrin: { reliable: "Pouzdano", reviews: "Recenzije" },
-        armenian: { reliable: "Հուսալի", reviews: "Մեկնաբանություններ" },
-        georgian: { reliable: "ნდობით აღჭურვილი", reviews: "მიმოხილვები" },
-        kazakh: { reliable: "Сенімді", reviews: "Пікірлер" },
-        uzbek: { reliable: "Ishonchli", reviews: "Sharhlar" },
-        kyrgyz: { reliable: "Ишенимдүү", reviews: "Пикирлер" },
-        tajik: { reliable: "Боэътимод", reviews: "Баррасӣ" },
-        hebrew: { reliable: "אמין", reviews: "ביקורות" },
-        persian: { reliable: "قابل اعتماد", reviews: "نقدها" },
-        nepali: { reliable: "विश्वसनीय", reviews: "समीक्षाहरू" },
-        sinhala: { reliable: "නම්බනීය", reviews: "සමාලෝචන" },
-        tamil: { reliable: "நம்பகமான", reviews: "விமர்சனங்கள்" },
-        telugu: { reliable: "నమ్మకమైన", reviews: "సమీక్షలు" },
-        kannada: { reliable: "ನಂಬಲರ್ಹ", reviews: "ವಿಮರ್ಶೆಗಳು" },
-        malayalam: { reliable: "വിശ്വസനീയ", reviews: "അവലോകനങ്ങൾ" },
-        marathi: { reliable: "विश्वसनीय", reviews: "समीक्षाएँ" },
-        gujarati: { reliable: "વિશ્વસનીય", reviews: "સમીક્ષાઓ" },
-        swahili: { reliable: "Inayohusiana", reviews: "Mapitio" },
-        amharic: { reliable: "ታመናቸው", reviews: "እትም" },
-        somali: { reliable: "Aamin", reviews: "Faallooyinka" },
-        malay: { reliable: "Dipercayai", reviews: "Ulasan" },
-        thai: { reliable: "เชื่อถือได้", reviews: "รีวิว" },
-        filipino: { reliable: "Mapagkakatiwalaan", reviews: "Mga Review" },
-        indonesian: { reliable: "Terpercaya", reviews: "Ulasan" },
-        zulu: { reliable: "Othembekile", reviews: "Izibuyekezo" },
-        haitian_creole: { reliable: "Fidèl", reviews: "Revizyon" },
-        yoruba: { reliable: "Gbẹkẹle", reviews: "Atunwo" },
-        igbo: { reliable: "Njikọ", reviews: "Nyocha" },
-        maori: { reliable: "Whakapono", reviews: "Arotake" },
-        samoan: { reliable: "Faatuatuaina", reviews: "Iloiloga" },
-        tigrinya: { reliable: "ታማኝ", reviews: "እይታዎች" },
-        pashto: { reliable: "باوري", reviews: "کتنې" },
-        luxembourgish: { reliable: "Zouverléisseg", reviews: "Bewäertungen" },
-        catalan: { reliable: "Fiable", reviews: "Resenyes" },
-        galician: { reliable: "Fiable", reviews: "Reseñas" },
-        basque: { reliable: "Fidagarria", reviews: "Iritziak" },
-        welsh: { reliable: "Dibynadwy", reviews: "Adolygiadau" },
-        irish: { reliable: "Iontaofa", reviews: "Athbhreithnithe" },
-        maltese: { reliable: "Affidabbli", reviews: "Reviżjonijiet" },
-        esperanto: { reliable: "Fidinda", reviews: "Recenzoj" },
-        lao: { reliable: "ໄວ້ໃຈໄດ້", reviews: "ຄຳທະວີ" },
-        burmese: { reliable: "ယုံကြည်ရသော", reviews: "သုံးသပ်ချက်များ" },
-        khmer: { reliable: "គួរឱ្យទុកចិត្ត", reviews: "ស្នើរសុំ" },
-        mongolian: { reliable: "Найдвартай", reviews: "Сэтгэгдэл" },
-        tibetan: { reliable: "རྟགས་ཅན་", reviews: "བསམ་བཀོད།" },
-        hmong: { reliable: "Tsim nyog ntseeg siab", reviews: "Kev tshuaj xyuas" },
-        uzbek_cyrillic: { reliable: "Ишончли", reviews: "Шарҳлар" },
-        romani: { reliable: "Vastipe", reviews: "Zuralimata" },
-    
+        // (További nyelvek itt...)
     };
-    
 
     // Ellenőrizni, hogy a szükséges CSS/JS már be van-e töltve
     const loadScriptAndCSS = () => {
@@ -155,8 +80,13 @@
 
         const currentStyle = styles[colorScheme] || styles.light;
 
+        // Get the domain and remove 'www.' if present
+        let domain = window.location.hostname;
+        if (domain.startsWith("www.")) {
+            domain = domain.substring(4);
+        }
+
         // Fetch the data for the widget
-        const domain = window.location.hostname;
         fetch(`https://forwebs.org/1operation/api/widget-datas.php?company=${domain}`)
             .then(response => response.json())
             .then(data => {

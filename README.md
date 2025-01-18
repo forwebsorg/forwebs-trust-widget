@@ -6,7 +6,7 @@ Forwebs.org trust HTML/JS widget for webmasters.
 <code><script src="https://cdn.jsdelivr.net/gh/forwebsorg/forwebs-trust-widget/forwebs-widget.js"></script></code>
 
 Features:
-- Automatic website and business detection based on the domain. Account optional to access pro features.
+- Automatic website and business detection based on the domain. Account optional to access pro business features.
 
   
 ## License

@@ -2,7 +2,7 @@
  * forwebs-widget.js
  * Created by: Őri Gábor
  * Website: Forwebs.org
- * Version: 0.1
+ * Version: 0.2
  * Description: The Trust Widget that displays the website's reliability and reviews.
  * License: CC BY-ND 4.0
  */
@@ -107,21 +107,6 @@
 
     // Ellenőrizni, hogy a szükséges CSS/JS már be van-e töltve
     const loadScriptAndCSS = () => {
-        if (!document.querySelector('link[href*="bootstrap.min.css"]')) {
-            const bootstrapCSS = document.createElement("link");
-            bootstrapCSS.rel = "stylesheet";
-            bootstrapCSS.href =
-                "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css";
-            document.head.appendChild(bootstrapCSS);
-        }
-
-        if (!document.querySelector('script[src*="bootstrap.bundle.min.js"]')) {
-            const bootstrapJS = document.createElement("script");
-            bootstrapJS.src =
-                "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js";
-            document.body.appendChild(bootstrapJS);
-        }
-
         if (!document.querySelector('link[href*="flaticon-uicons"]')) {
             const flatIconsCSS = document.createElement("link");
             flatIconsCSS.rel = "stylesheet";
@@ -209,7 +194,24 @@
                 styleElement.textContent = `
                     #${widgetId} {
                         width: 100%;
+                            margin: 0;
+                            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #212529;
+                            -webkit-text-size-adjust: 100%;
+                            -webkit-tap-highlight-color: transparent;
                     }
+
+                    #${widgetId} img, svg {
+                        vertical-align: middle;
+                    }
+
+                    #${widgetId} *, ::after, ::before {
+                        box-sizing: border-box;
+                    }
+
                     #${widgetId} a {
                         display: inline-flex;
                         align-items: center;
